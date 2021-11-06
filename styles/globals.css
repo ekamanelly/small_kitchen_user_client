@@ -1,0 +1,670 @@
+/* html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+} */
+
+body {
+  margin: 0px;
+  padding: 0px;
+  /* font-family: balootammareg; */
+  background: #f8fff7;
+  overflow-y: scroll;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.navCoat {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 70px;
+  margin: 20px 0px;
+}
+
+.navCoatMb {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 30px;
+  margin: 20px 0px;
+}
+
+.logoName {
+  font-weight: 600;
+  font-size: 22px;
+  color: #318c27;
+}
+
+.logoName:hover {
+  text-decoration: none;
+  color: #318c27;
+}
+
+.navLinks {
+  display: flex;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #000000;
+}
+
+.navLink:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
+.menuBarWrap {
+  margin-top: 5px;
+}
+
+.linkA {
+  padding: 0px 20px;
+  font-weight: 400;
+}
+
+.linkBtn {
+  margin: -5px 0px;
+  padding: 0px 0px 0px 20px;
+}
+
+.acctBtn {
+  background: none;
+  padding: 7px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.leftCol {
+  margin-top: 30px;
+}
+
+.landingPage {
+  padding: 0px 20px;
+  margin-bottom: 40px;
+}
+
+.welcomeAddress {
+  font-size: 37px;
+  font-weight: 600;
+}
+
+.welcomeAddress > span {
+  color: #318c27;
+  padding: 0px;
+}
+.wDescDiv {
+  margin-top: 15px;
+}
+
+.wDesc {
+  font-size: 17px;
+}
+
+.btnPlayDiv {
+  margin-top: 20px;
+}
+
+.btnPlay,
+.btnGrow,
+.btnDouble {
+  padding: 12px;
+  font-size: 14px;
+  background: #318c27;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+  width: 205px;
+}
+
+.btnGrow,
+.btnDouble {
+  margin-top: 20px;
+}
+
+.vTwo {
+  background: #fff;
+  padding: 30px 0px 30px 0px;
+}
+.businessGrowth,
+.seemless {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.businessGrowth > span {
+  color: #318c27;
+}
+
+.seem {
+  font-size: 35px;
+  color: #318c27;
+}
+
+.joinDesc {
+  margin: 10px 0px;
+}
+
+.bGWrap,
+.hustWrap {
+  margin: 20px 0px 90px 0px;
+}
+
+.burnout {
+  height: 350px;
+  width: 250px;
+}
+
+.virr {
+  color: #fff;
+}
+
+.imgHeroImg {
+  height: 450px;
+  width: 450px;
+}
+
+.imagesTwo {
+  height: 450px;
+  width: 400px;
+}
+
+.trend {
+  margin-top: 20px;
+  width: 100%;
+  background: #318c27;
+}
+
+.future {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.trend {
+  padding: 65px;
+}
+
+.joinBtn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  outline: none;
+  width: 205px;
+  margin: 7px 0px 0px 0px;
+}
+
+.stepsToJoin {
+  font-size: 14px;
+  margin: 10px 0px;
+}
+
+.stepsToJoin > div > span {
+  color: #fff;
+  margin-left: 10px;
+}
+
+.orgSteps {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.orgSteps > span {
+  color: #318c27;
+}
+
+.getStarted {
+  padding: 30px 0px;
+}
+
+.steps {
+  border-bottom: 1px solid #000;
+  padding: 10px 0px;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  padding: 20px 50px 20px 50px;
+}
+
+.footerName {
+  font-size: 20px;
+  color: #ffffff;
+}
+.nameNav {
+  display: flex;
+  justify-content: space-between;
+}
+.footerNav > span {
+  padding: 0px 20px 0px 20px;
+}
+
+.socials {
+  padding: 10px 0px 0px 0px;
+}
+
+.socials > span {
+  font-size: 17px;
+  padding: 5px 10px 5px 0px;
+  color: #318c27;
+}
+
+.copyright > span {
+  font-size: 12px;
+  color: #e4e4e4;
+}
+
+.blinkCoat {
+  width: 100%;
+  min-height: 30px;
+  background: #002a55;
+  border-radius: 5px;
+  padding: 4px 0px 0px 0px;
+  /*border-top: 2px solid #00192e;
+    border-bottom: 2px solid #00192e; */
+}
+
+.blink {
+  font-size: 1em;
+  color: #fff;
+  font-weight: 600;
+  animation: blink 2s linear infinite;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.navbar-toggler {
+  padding: 0;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+/*======================================================================*/
+
+.redButton {
+  background: linear-gradient(#ff0000, #800000);
+  border: none;
+  outline: none;
+  padding: 4px 10px 1px 10px;
+}
+
+.redButton:hover,
+.redButton:focus {
+  background: linear-gradient(#800000, #ff0000);
+  box-shadow: none;
+}
+
+.blueButton {
+  background: linear-gradient(#00547a, #00192e);
+  border: none;
+  outline: none;
+  padding: 4px 10px 1px 10px;
+}
+
+.blueButton:hover,
+.blueButton:focus {
+  background: linear-gradient(#00192e, #00547a);
+  box-shadow: none;
+}
+
+/* @font-face {
+  src: url(fonts/BalooTamma2-Regular.ttf);
+  font-family: balootammareg;
+} */
+
+body {
+  margin: 0px;
+  padding: 0px;
+  /* font-family: balootammareg; */
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.navCoat {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 70px;
+  margin: 20px 0px;
+}
+
+.navCoatMb {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 30px;
+  margin: 20px 0px;
+}
+
+.logoName {
+  font-weight: 600;
+  font-size: 22px;
+  color: #318c27;
+}
+
+.logoName:hover {
+  text-decoration: none;
+  color: #318c27;
+}
+
+.navLinks {
+  display: flex;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #000000;
+}
+
+.navLink:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
+.menuBarWrap {
+  margin-top: 5px;
+}
+
+.linkA {
+  padding: 0px 20px;
+  font-weight: 400;
+}
+
+.linkBtn {
+  margin: -5px 0px;
+  padding: 0px 0px 0px 20px;
+}
+
+.acctBtn {
+  background: none;
+  padding: 7px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.servicePic {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #000;
+  margin-right: 30px;
+}
+
+.serviceDesc {
+  padding: 0px 20px;
+}
+
+.serviceNameWrap {
+  display: flex;
+}
+
+.serviceName {
+  font-size: 40px;
+  font-weight: 400;
+}
+.ratings {
+  margin: 10px 0px 0px 16px;
+}
+
+.stars {
+  font-size: 13px;
+}
+
+.dishesFollowersWrap {
+  display: flex;
+}
+
+.followers {
+  margin: 0px 0px 0px 50px;
+}
+
+.dishnr,
+.follownr {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.aboutService {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.aboutServiceWrap {
+  padding: 0px 0px;
+  margin: 6px 0px 0px 0px;
+}
+
+.aboutServiceWrap > ul {
+  padding: 0px;
+  margin: 0px 0px 0px 16px;
+  list-style-type: circle;
+}
+
+.about {
+  margin: 25px 0px 0px 0px;
+}
+
+.buttons {
+  display: flex;
+}
+
+.sendMsg {
+  margin: 0px 0px 0px 10px;
+  width: 130px;
+  height: 42px;
+  background: transparent;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+.followbtn {
+  width: 130px;
+  height: 42px;
+  background: #000000;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid #000000;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.dFbWrap {
+  display: flex;
+  margin: auto;
+  width: 40020;
+  margin-top: 20px;
+}
+
+.dishNav,
+.feedBck {
+  width: 170px;
+  border: none;
+  text-align: center;
+  border-bottom: 2px solid #000000;
+  margin: 1px;
+  font-weight: 500;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  padding: 20px 50px 20px 50px;
+}
+
+.footerName {
+  font-size: 20px;
+}
+.nameNav {
+  display: flex;
+  justify-content: space-between;
+}
+.footerNav > span {
+  padding: 0px 20px 0px 20px;
+}
+
+.socials {
+  padding: 10px 0px 0px 0px;
+}
+
+.socials > span {
+  font-size: 17px;
+  padding: 5px 10px 5px 0px;
+  color: #e4e4e4;
+}
+
+.copyright > span {
+  font-size: 12px;
+  color: #e4e4e4;
+}
+
+.blinkCoat {
+  width: 100%;
+  min-height: 30px;
+  background: #002a55;
+  border-radius: 5px;
+  padding: 4px 0px 0px 0px;
+  /*border-top: 2px solid #00192e;
+    border-bottom: 2px solid #00192e; */
+}
+
+.blink {
+  font-size: 1em;
+  color: #fff;
+  font-weight: 600;
+  animation: blink 2s linear infinite;
+  padding: 0px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.navbar-toggler {
+  padding: 0;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+/*======================================================================*/
+
+.redButton {
+  background: linear-gradient(#ff0000, #800000);
+  border: none;
+  outline: none;
+  padding: 4px 10px 1px 10px;
+}
+
+.redButton:hover,
+.redButton:focus {
+  background: linear-gradient(#800000, #ff0000);
+  box-shadow: none;
+}
+
+.blueButton {
+  background: linear-gradient(#00547a, #00192e);
+  border: none;
+  outline: none;
+  padding: 4px 10px 1px 10px;
+}
+
+.blueButton:hover,
+.blueButton:focus {
+  background: linear-gradient(#00192e, #00547a);
+  box-shadow: none;
+}
+
+/*================================ Small devices... landscape phones, 576px and up ======================================*/
+@media (max-width: 576px) {
+  .businessGrowth,
+  .seemless {
+    font-size: 22px;
+  }
+
+  .welcomeAddress {
+    font-size: 29px;
+  }
+
+  .bGDesc,
+  .bDoubleDesc {
+    font-size: 15px;
+  }
+
+  .seem {
+    font-size: 27px;
+  }
+
+  .trend {
+    padding: 10px;
+  }
+}
+
+/*================================ Small devices... landscape phones, 576px and up ======================================*/
+@media (min-width: 576px) {
+  .burnGDiv,
+  .xyz {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .serviceName {
+    font-size: 30px;
+  }
+
+  .dFbWrap {
+    width: 200px;
+  }
+}
