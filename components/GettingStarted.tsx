@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+import SignUp from "../public/media/SignUp.png";
 
 function GettingStarted() {
   return (
@@ -26,7 +28,17 @@ function GettingStarted() {
                 laboriosam inventore labore asperiores error.
               </div>
             </div>
-            <div className="col-md-6"></div>
+            <div className="col-md-6">
+              <div className="vidWrap">
+                <div className="img-fluid">
+                  <Image
+                    src={SignUp}
+                    alt="photo"
+                    //   className="burnout"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Burnout from "../public/media/Burnout.png";
 
 // image;
 
@@ -8,17 +9,16 @@ function FocusOnGrowing() {
     <div>
       <div className="bGWrap">
         <div className="container">
-          <div className="row">
+          <div className="row align-items-center justify-content-center">
             <div className="col-md-5">
               <div className="burnGDiv">
-                <Image
-                  src="/media/burnout.png"
-                  //   layout="fill"
-                  width={100}
-                  height={100}
-                  alt="burnout grills img"
-                  className="img-fluid burnout"
-                />
+                <div className="img-fluid">
+                  <Image
+                    src={Burnout}
+                    alt="photo"
+                    //   className="burnout"
+                  />
+                </div>
               </div>
             </div>
             <div className="col-md-7">

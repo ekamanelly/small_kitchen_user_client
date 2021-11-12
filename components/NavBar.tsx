@@ -1,15 +1,24 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import Logo from "../public/media/Logo.svg";
 
 function NavBar() {
   return (
     <div>
-      <div className=" d-none d-lg-block">
+      <div className=" d-none d-md-block">
         <div className="navCoat">
           <div className="navInnerCoat">
             <div className="logoCoat">
               <Link href="/" passHref>
-                <button className="logoName">carousel.</button>
+                {/* <button className="logoName">carousel.</button> */}
+                <div className="img-fluid">
+                  <Image
+                    src={Logo}
+                    alt="photo"
+                    //   className="burnout"
+                  />
+                </div>
               </Link>
             </div>
           </div>

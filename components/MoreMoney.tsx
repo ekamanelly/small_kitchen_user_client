@@ -1,14 +1,13 @@
 import Image from "next/image";
 import React from "react";
-
-// image
+import ImgTwo from "../public/media/ImgTwo.png";
 
 function MoreMoney() {
   return (
     <div>
       <div className="hustWrap">
         <div className="container">
-          <div className="row">
+          <div className="row align-items-center justify-content-center">
             <div className="col-md-6">
               <div className="businessGrowth">
                 Need to make more money?
@@ -32,16 +31,13 @@ function MoreMoney() {
             </div>
             <div className="col-md-6">
               <div className="xyz">
-                <Image
-                  src="/media/image_2.png"
-                  width={100}
-                  height={100}
-                  //   layout="fill"
-                  //   width={500}
-                  //   height={500}
-                  className="imagesTwo responsive"
-                  alt=""
-                />
+                <div className="img-fluid">
+                  <Image
+                    src={ImgTwo}
+                    alt="photo"
+                    //   className="imagesTwo"
+                  />
+                </div>
               </div>
             </div>
           </div>

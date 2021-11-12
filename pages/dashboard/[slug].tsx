@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
-import DashBoardItems from "../../components/shared/DashBoardItems";
-import Footer from "../../components/shared/Footer";
-import LogoImg from "../../components/shared/LogoImg";
-import NavBar from "../../components/shared/NavBar";
+import DashBoardItems from "../../components/DashBoardItems";
+import Footer from "../../components/Footer";
+import LogoImg from "../../components/LogoImg";
+import NavBar from "../../components/NavBar";
 
 const Dashboard = () => {
   const router = useRouter();

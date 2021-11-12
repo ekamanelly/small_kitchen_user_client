@@ -1,12 +1,13 @@
 import Image from "next/image";
 import React from "react";
+import Hero from "../public/media/Hero.png";
 
-// image
+
 function HeroSection() {
   return (
     <div>
       <div className="container landingPage">
-        <div className="row">
+        <div className="row align-items-center justify-content-center">
           <div className="col-lg-6">
             <div className="leftCol">
               <div className="welcomeAddress">
@@ -27,15 +28,14 @@ function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="col-lg-6 d-none d-lg-block">
-            {/* <Image
-              src="/media/hero.png"
-              layout="fill"
-              //   width={100}
-              //   height={100}
-              //   alt="hero img"
-              //   className="imgHeroImg"
-            /> */}
+          <div className="col-lg-6 ">
+            <div className="img-fluid">
+              <Image
+                src={Hero}
+                alt="photo"
+                //   className="imgHeroImg"
+              />
+            </div>
           </div>
         </div>
       </div>
