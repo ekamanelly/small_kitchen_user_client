@@ -1,5 +1,7 @@
 .chika {
   background-color: black;
-  font-size: 20rem;
+  font-size: 2rem;
+  height: 100vh;
+  color: darkcyan;
   /* style and separate concerns  */
 }
