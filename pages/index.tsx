@@ -16,17 +16,17 @@ const Home: NextPage = () => {
   return (
     <div>
       <main>
-          <NavBar />
-          <LogoImg />
-          <HeroSection />
-          <div className="vTwo">
-              <FocusOnGrowing />
-              <MoreMoney />
-              <Seemlessly />
-              <FutureIsVirtual />
-              <GettingStarted />
-          </div>
-          <Footer />
+        <NavBar />
+        <LogoImg />
+        <HeroSection />
+        <div className="vTwo">
+          <FocusOnGrowing />
+          <MoreMoney />
+          <Seemlessly />
+          <FutureIsVirtual />
+          <GettingStarted />
+        </div>
+        <Footer />
       </main>
     </div>
   );
