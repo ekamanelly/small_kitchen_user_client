@@ -1,17 +1,16 @@
 import React from "react";
+import Image from "next/image";
+import Logo from "../public/media/Logo.svg";
 
 function LogoImg() {
   return (
     <div>
-      <div className="d-block d-lg-none">
-        <div className="navCoatMb">
-          {/* <div className="navInnerCoatMb">
-                        <div className="logoCoatMb"><a href="#" className="logoName">carousel.</a></div>
-                    </div> */}
-          <div className="menuBarWrap">
-            <i className="fas fa-bars"></i>
-          </div>
-        </div>
+      <div className="img-fluid">
+        <Image
+          src={Logo}
+          alt="photo"
+          //   className="burnout"
+        />
       </div>
     </div>
   );
