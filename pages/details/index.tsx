@@ -5,6 +5,7 @@ import Badge from "../../public/media/Badge.svg";
 import CommentCard from "../../components/CommentCard";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
+import MeatSample from "../../components/MeatSample";
 
 function FoodDetails() {
   return (
@@ -69,6 +70,12 @@ function FoodDetails() {
           <div className="col-md-2 text-green-500">
             <span>see all</span>
           </div>
+        </div>
+        <div className="flex align-items-center justify-items-center">
+          <MeatSample />
+          <MeatSample />
+          <MeatSample />
+          <MeatSample />
         </div>
         <CommentCard />
         <CommentCard />

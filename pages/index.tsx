@@ -7,7 +7,6 @@ import Footer from "../components/Footer";
 import FutureIsVirtual from "../components/FutureIsVirtual";
 import GettingStarted from "../components/GettingStarted";
 import HeroSection from "../components/HeroSection";
-import LogoImg from "../components/LogoImg";
 import MoreMoney from "../components/MoreMoney";
 import NavBar from "../components/NavBar";
 import Seemlessly from "../components/Seemlessly";
@@ -17,7 +16,6 @@ const Home: NextPage = () => {
     <div>
       <main>
         <NavBar />
-        <LogoImg />
         <HeroSection />
         <div className="vTwo">
           <FocusOnGrowing />

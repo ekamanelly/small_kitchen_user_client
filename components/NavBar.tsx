@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../public/media/Logo.svg";
+import LogoImgHeader from "./LogoImgHeader";
 
 function NavBar() {
   return (
@@ -11,14 +11,7 @@ function NavBar() {
           <div className="navInnerCoat">
             <div className="logoCoat">
               <Link href="/" passHref>
-                {/* <button className="logoName">carousel.</button> */}
-                <div className="img-fluid">
-                  <Image
-                    src={Logo}
-                    alt="photo"
-                    //   className="burnout"
-                  />
-                </div>
+                <LogoImgHeader />
               </Link>
             </div>
           </div>

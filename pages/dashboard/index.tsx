@@ -1,14 +1,16 @@
-import React from 'react'
-import LogoImg from '../../components/LogoImg';
-import NavBar from '../../components/NavBar';
+import React from "react";
+import DashBoardItems from "../../components/DashBoardItems";
+import Footer from "../../components/Footer";
+import NavBar from "../../components/NavBar";
 
 function VendorProfile() {
-    return (
-        <div>
-            <LogoImg />
-            <NavBar />
-        </div>
-    )
+  return (
+    <div>
+      <NavBar />
+      <DashBoardItems />
+      <Footer />
+    </div>
+  );
 }
 
-export default VendorProfile
+export default VendorProfile;

@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import DashBoardItems from "./DashBoardItems";
 
 function FeedBack() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <div>
+      <DashBoardItems />
+    </div>
+  );
 }
 
-export default FeedBack
+export default FeedBack;

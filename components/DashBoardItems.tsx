@@ -1,7 +1,7 @@
-// import Image from "next/image";
-// import Image from "next/image";
+import Image from "next/image";
 import React from "react";
-// import { Interface } from "readline";
+import BigBadge from "../public/media/BigBadge.svg";
+import Tab from "./Tab";
 
 interface vendors {
   businessName: string;
@@ -10,22 +10,16 @@ interface vendors {
 function DashBoardItems() {
   return (
     <div>
-      <div className="secondRow container">
-        <div className="row">
-          <div className="">
-            <div className="servicePic"></div>
+      <div className="container">
+        <div className="flex space-x-2">
+          <div className="sectionOne">
+            <Image src={BigBadge} alt="photo" />
           </div>
-          <div className="innerDetails">
+          <div className="sectionTwo">
             <div className="serviceNameWrap">
-              <span className="serviceName">Big bit</span>
+              <span className="serviceName">Burnout Grills</span>
               <div className="ratings">
-                <div className="stars">
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="far fa-star"></i>
-                </div>
+                <div className="stars"></div>
                 <div className="stars">4.8 (20 ratings)</div>
               </div>
             </div>
@@ -67,14 +61,7 @@ function DashBoardItems() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="container">
-        <div className="row">
-          <div className="dFbWrap">
-            <div className="dishNav">Dishes</div>
-            <div className="feedBck">Feedback (115)</div>
-          </div>
-        </div>
+        <Tab />
       </div>
     </div>
   );

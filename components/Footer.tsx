@@ -1,5 +1,5 @@
 import React from "react";
-import LogoImg from "./LogoImg";
+import LogoFooter from "./LogoFooter";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { ImTwitter } from "react-icons/im";
@@ -12,11 +12,11 @@ function Footer() {
         <div className="footerDiv">
           <div className="nameNav">
             <span className="footerName">
-              <LogoImg />
+              <LogoFooter />
             </span>
           </div>
-          <div className="w-28 socials d-flex text-green-500">
-            <span className="text-green-500">
+          <div className="w-28 socials d-flex">
+            <span className="">
               <AiFillInstagram />
             </span>
             <span>

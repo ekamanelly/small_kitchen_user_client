@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import DashBoardItems from "../../components/DashBoardItems";
 import Footer from "../../components/Footer";
-import LogoImg from "../../components/LogoImg";
+import LogoImgHeader from "../../components/LogoImgHeader";
 import NavBar from "../../components/NavBar";
 
 const Dashboard = () => {
@@ -11,7 +11,7 @@ const Dashboard = () => {
   return (
     <div>
       <NavBar />
-      <LogoImg />
+      <LogoImgHeader />
       <DashBoardItems />
       <Footer />
     </div>
