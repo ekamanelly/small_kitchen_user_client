@@ -40,9 +40,15 @@ function NavBar() {
                 </Link>
               </div>
               <div className="linkBtn">
-                <button onClick={loginWithGoogle} className="acctBtn">
-                  Create an Account
-                </button>
+                {!user ? (
+                  <button onClick={loginWithGoogle} className="acctBtn">
+                    Create an Account
+                  </button>
+                ) : (
+                  <button onClick={logOut} className="acctBtn">
+                    log out
+                  </button>
+                )}
               </div>
             </div>
           </div>

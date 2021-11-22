@@ -29,7 +29,7 @@ export function AuthProvider(props: any) {
     await AuthService.logout();
     setUser(null);
   };
-  const value = { error, user, loginWithGoogle, logOut };
+  const value = { error, user, loginWithGoogle, logOut, setUser, setError };
 
   return <AuthContext.Provider value={value} {...props} />;
 }

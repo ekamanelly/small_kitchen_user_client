@@ -10,6 +10,7 @@ import HeroSection from "../components/HeroSection";
 import MoreMoney from "../components/MoreMoney";
 import NavBar from "../components/NavBar";
 import Seemlessly from "../components/Seemlessly";
+import { withPublic } from "../hooks/route";
 
 const Home: NextPage = () => {
   return (
@@ -30,4 +31,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default withPublic(Home);

@@ -2,6 +2,7 @@ import React from "react";
 import DashBoardItems from "../../components/DashBoardItems";
 import Footer from "../../components/Footer";
 import NavBar from "../../components/NavBar";
+import { withProtect } from "../../hooks/route";
 
 function VendorProfile() {
   return (
@@ -13,4 +14,4 @@ function VendorProfile() {
   );
 }
 
-export default VendorProfile;
+export default withProtect(VendorProfile);
