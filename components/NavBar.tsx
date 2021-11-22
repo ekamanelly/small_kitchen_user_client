@@ -2,8 +2,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import LogoImgHeader from "./LogoImgHeader";
+import useAuth from "../hooks/auth.hook";
 
 function NavBar() {
+  const { error, user, loginWithGoogle, logOut } = useAuth();
   return (
     <div>
       <div className=" d-none d-md-block">
@@ -38,7 +40,9 @@ function NavBar() {
                 </Link>
               </div>
               <div className="linkBtn">
-                <button className="acctBtn">Create an Account</button>
+                <button onClick={loginWithGoogle} className="acctBtn">
+                  Create an Account
+                </button>
               </div>
             </div>
           </div>
