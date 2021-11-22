@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import signImage from "../public/media/signimage.png";
+import oneSign from "../public/media/oneSign.png";
 
 function GettingStarted() {
   return (
@@ -32,7 +32,7 @@ function GettingStarted() {
               <div className="vidWrap">
                 <div className="img-fluid">
                   <Image
-                    src={signImage}
+                    src={oneSign}
                     alt="photo"
                     //   className="burnout"
                   />
