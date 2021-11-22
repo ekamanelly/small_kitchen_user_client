@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Hero from "../public/media/Hero.png";
-
+import hero from "../public/media/hero.png";
 
 function HeroSection() {
   return (
@@ -31,7 +30,7 @@ function HeroSection() {
           <div className="col-lg-6 ">
             <div className="img-fluid">
               <Image
-                src={Hero}
+                src={hero}
                 alt="photo"
                 //   className="imgHeroImg"
               />
