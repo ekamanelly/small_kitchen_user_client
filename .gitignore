@@ -9,6 +9,11 @@
 # testing
 /coverage
 #firebase services
+functions/
+.firebaserc
+firebase.json
+firestore.indexes.json
+firestore.rules
 
 
 # next.js
