@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import SignUp from "../public/media/SignUp.png";
+import signUp from "../public/media/signUp.png";
 
 function GettingStarted() {
   return (
@@ -32,7 +32,7 @@ function GettingStarted() {
               <div className="vidWrap">
                 <div className="img-fluid">
                   <Image
-                    src={SignUp}
+                    src={signUp}
                     alt="photo"
                     //   className="burnout"
                   />
