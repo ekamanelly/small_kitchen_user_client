@@ -23,6 +23,7 @@ export function AuthProvider(props: any) {
   const loginWithGoogle = async () => {
     const { error, user } = await AuthService.loginWithGoogle();
     setUser(user);
+    //
     setError(error);
   };
   const logOut = async () => {

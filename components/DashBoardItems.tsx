@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import useAuth from "../hooks/auth.hook";
 import BigBadge from "../public/media/BigBadge.svg";
 import Tab from "./Tab";
 
@@ -8,6 +9,8 @@ interface vendors {
 }
 
 function DashBoardItems() {
+  const { user } = useAuth();
+  console.log(user.displayName);
   return (
     <div>
       <div className="container">
@@ -44,6 +47,7 @@ function DashBoardItems() {
               </div>
               <div className="aboutServiceWrap">
                 <ul>
+                  <li>Owner {user.displayName}</li>
                   <li>Yaba, Lagos</li>
                   <li>Sumptuous meals</li>
                   <li>Continental and African Dishes</li>

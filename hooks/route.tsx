@@ -1,5 +1,7 @@
 import { useRouter } from "next/router";
+import LottieAnimation from "../components/animation/lottieAnimation";
 import useAuth from "./auth.hook";
+import loading from "../public/animation/loading.json";
 
 export const withPublic = (Component: any) => {
   return function WithPublic(props: any) {
@@ -7,8 +9,8 @@ export const withPublic = (Component: any) => {
     const router = useRouter();
     console.log({ user: auth.user });
     if (auth.user !== null) {
-      router.replace("/dashboard");
-      return <h1>Loading......</h1>;
+      setTimeout(() => router.replace("/dashboard"), 1800);
+      return <LottieAnimation lotti={loading} height={600} width={600} />;
     }
     return <Component auth={auth} {...props} />;
   };
@@ -19,8 +21,9 @@ export const withProtect = (Component: any) => {
     const auth = useAuth();
     const router = useRouter();
     if (auth.user === null) {
-      router.replace("/");
-      return <h1>Loading...</h1>;
+      // router.replace("/");
+      setTimeout(() => router.replace("/"), 1800);
+      return <LottieAnimation lotti={loading} height={600} width={600} />;
     }
     return <Component auth={auth} {...props} />;
   };
