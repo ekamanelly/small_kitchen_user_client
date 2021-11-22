@@ -1,8 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Burnout from "../public/media/Burnout.png";
-
-// image;
+import burnout from "../public/media/burnout.png";
 
 function FocusOnGrowing() {
   return (
@@ -14,7 +12,7 @@ function FocusOnGrowing() {
               <div className="burnGDiv">
                 <div className="img-fluid">
                   <Image
-                    src={Burnout}
+                    src={burnout}
                     alt="photo"
                     //   className="burnout"
                   />
