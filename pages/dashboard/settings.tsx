@@ -1,20 +1,21 @@
 import React from "react";
 import DashBoardItems from "../../components/DashBoardItems";
 import Footer from "../../components/Footer";
+import LayoutForm from "../../components/layout/layoutForm";
 import NavBar from "../../components/NavBar";
 import useAuth from "../../hooks/auth.hook";
 import { withProtect } from "../../hooks/route";
 
-function VendorProfile() {
+function Settings() {
   const { user } = useAuth();
 
   return (
     <div>
       <NavBar />
-      <DashBoardItems user={user} />
+      <LayoutForm />
       <Footer />
     </div>
   );
 }
 
-export default withProtect(VendorProfile);
+export default withProtect(Settings);

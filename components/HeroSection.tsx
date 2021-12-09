@@ -1,8 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import useAuth from "../hooks/auth.hook";
 import hero from "../public/media/hero.png";
 
 function HeroSection() {
+  const { error, user, loginWithGoogle, logOut } = useAuth();
   return (
     <div>
       <div className="container landingPage">
@@ -20,7 +22,7 @@ function HeroSection() {
                 </span>
               </div>
               <div className="btnPlayDiv">
-                <button className="btnPlay">
+                <button className="btnPlay" onClick={loginWithGoogle}>
                   Learn more about carousel
                   <i className="fas fa-play-circle"> </i>
                 </button>

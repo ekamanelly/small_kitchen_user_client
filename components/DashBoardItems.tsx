@@ -1,18 +1,35 @@
 import Image from "next/image";
-import React from "react";
-import useAuth from "../hooks/auth.hook";
+import { useRouter } from "next/router";
+import React, { useState } from "react";
+import { useRecoilState, RecoilState } from "recoil";
+import { RevealForm } from "../atoms";
 import BigBadge from "../public/media/BigBadge.svg";
+import CustomButton from "./forms/customButton";
+import LayoutForm from "./layout/layoutForm";
 import Tab from "./Tab";
 
 interface vendors {
   businessName: string;
 }
 
-function DashBoardItems() {
-  const { user } = useAuth();
-  console.log(user.displayName);
+interface DashboardProps {
+  user: {
+    displayName: string;
+  };
+}
+function DashBoardItems(props: DashboardProps) {
+  const [reveal, setReveal] = useRecoilState(RevealForm);
+  const router = useRouter();
+
+  const handleForm = () => {
+    router.replace("/dashboard/settings");
+
+    // setReveal(!reveal);
+  };
+
   return (
     <div>
+      {reveal && <LayoutForm />}
       <div className="container">
         <div className="flex space-x-2">
           <div className="sectionOne">
@@ -24,6 +41,9 @@ function DashBoardItems() {
               <div className="ratings">
                 <div className="stars"></div>
                 <div className="stars">4.8 (20 ratings)</div>
+                <div>
+                  <CustomButton value={"svsv"} onclick={handleForm} />
+                </div>
               </div>
             </div>
             <div className="dishesFollowersWrap">
@@ -47,7 +67,7 @@ function DashBoardItems() {
               </div>
               <div className="aboutServiceWrap">
                 <ul>
-                  <li>Owner {user.displayName}</li>
+                  <li>Owner {props.user.displayName}</li>
                   <li>Yaba, Lagos</li>
                   <li>Sumptuous meals</li>
                   <li>Continental and African Dishes</li>

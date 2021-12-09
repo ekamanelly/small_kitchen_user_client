@@ -7,14 +7,23 @@ import "bootstrap/dist/css/bootstrap.css";
 import type { AppProps } from "next/app";
 import { AuthProvider } from "../hooks/auth.hook";
 import AuthStateChange from "../components/layout/authChange";
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from "recoil";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <AuthProvider>
-      <AuthStateChange>
-        <Component {...pageProps} />;
-      </AuthStateChange>
-    </AuthProvider>
+    <RecoilRoot>
+      <AuthProvider>
+        <AuthStateChange>
+          <Component {...pageProps} />;
+        </AuthStateChange>
+      </AuthProvider>
+    </RecoilRoot>
   );
 }
 

@@ -42,39 +42,18 @@ const Feedback = () => {
 
 const Dishes = () => {
   return (
-    <div className="container dishes">
-      <div className="flex">
-        <div>
-          <MeatSample />
-        </div>
-        <div>
-          <MeatSample />
-        </div>
-        <div>
-          <MeatSample />
-        </div>
-      </div>
-      <div className="flex">
-        <div>
-          <MeatSample />
-        </div>
-        <div>
-          <MeatSample />
-        </div>
-        <div>
-          <MeatSample />
-        </div>
-      </div>
-      <div className="flex">
-        <div>
-          <MeatSample />
-        </div>
-        <div>
-          <MeatSample />
-        </div>
-        <div>
-          <MeatSample />
-        </div>
+    <div className="lg:container">
+      <div
+        className="grid lg:grid-cols-2  md:grid-cols-1 gap-1 sm :grid-cols-1 px-10"
+        // style={{ backgroundColor: "red" }}
+      >
+        <MeatSample />
+        <MeatSample />
+        <MeatSample />
+        <MeatSample />
+        <MeatSample />
+        <MeatSample />
+        <MeatSample />
       </div>
     </div>
   );

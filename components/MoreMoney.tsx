@@ -1,8 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import useAuth from "../hooks/auth.hook";
 import ImgTwo from "../public/media/ImgTwo.png";
 
 function MoreMoney() {
+  const { error, user, loginWithGoogle, logOut } = useAuth();
   return (
     <div>
       <div className="hustWrap">
@@ -25,7 +27,7 @@ function MoreMoney() {
                   <br /> We wil handle delivea
                 </span>
               </div>
-              <div className="bDouble">
+              <div className="bDouble" onClick={loginWithGoogle}>
                 <button className="btnDouble">Double my Hustle!</button>
               </div>
             </div>

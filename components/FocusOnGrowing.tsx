@@ -1,8 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import useAuth from "../hooks/auth.hook";
 import burnout from "../public/media/burnout.png";
 
 function FocusOnGrowing() {
+  const { error, user, loginWithGoogle, logOut } = useAuth();
   return (
     <div>
       <div className="bGWrap">
@@ -34,7 +36,7 @@ function FocusOnGrowing() {
                   <br /> We wil handle delivery
                 </span>
               </div>
-              <div className="bGrowthbtn">
+              <div className="bGrowthbtn" onClick={loginWithGoogle}>
                 <button className="btnGrow">Grow my Business</button>
               </div>
             </div>

@@ -24,16 +24,16 @@ function NavBar() {
                   <button className="navLink">Home</button>
                 </Link>
               </div>
-              <div className="linkA">
+              {/* <div className="linkA">
                 <Link href="#" passHref>
                   <button className="navLink">About</button>
                 </Link>
-              </div>
-              <div className="linkA">
+              </div> */}
+              {/* <div className="linkA">
                 <Link href="#" passHref>
                   <button className="navLink"> Blog</button>
                 </Link>
-              </div>
+              </div> */}
               <div className="linkA">
                 <Link href="#" passHref>
                   <button className="navLink">Contact Us</button>
