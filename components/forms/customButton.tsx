@@ -4,7 +4,7 @@ import { CustomInputProps } from "./customInput";
 function CustomButton(props: CustomInputProps) {
   return (
     <div>
-      <button className="sendMsg" onClick={props.onclick}>
+      <button className="bg-lime" onClick={props.onclick}>
         {props.value}
       </button>
     </div>

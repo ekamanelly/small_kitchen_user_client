@@ -76,9 +76,10 @@ function LayoutForm() {
     <div className="container">
       <div
         onDoubleClick={handleForm}
-        className="p-4 w-full flex justify-center  h-full z-100"
+        className="p-4 w-full flex justify-center  h-full z-100  "
+        // style={{ backgroundColor: "red" }}
       >
-        <div className=" p-4 w-2/5 center ">
+        <div className=" p-4 w-2/5 center bg-lime-300 ">
           <form onSubmit={formik.handleSubmit}>
             <CustomInput value="company's name" label="company name" />
             <CustomInput
@@ -97,7 +98,7 @@ function LayoutForm() {
                 onblur={formik.handleBlur}
                 err={formik.errors["state"]}
                 touched={formik.touched["state"]}
-              />{" "}
+              />
               <CustomInput
                 value="country"
                 label="country "
@@ -105,7 +106,7 @@ function LayoutForm() {
                 onblur={formik.handleBlur}
                 err={formik.errors["country"]}
                 touched={formik.touched["country"]}
-              />{" "}
+              />
             </div>
             <CustomTextArea
               value="description"
@@ -115,7 +116,7 @@ function LayoutForm() {
               err={formik.errors["description"]}
               touched={formik.touched["description"]}
             />
-            <CustomInput value="description" />
+
             <div className=" mt-10 flex flex-row-reverse">
               <CustomButton value="Sorry!" />
               <CustomButton value="I like this, save!" />

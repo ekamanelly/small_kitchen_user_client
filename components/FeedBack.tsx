@@ -1,10 +1,12 @@
 import React from "react";
+import useAuth from "../hooks/auth.hook";
 import DashBoardItems from "./DashBoardItems";
 
 function FeedBack() {
+  const user = useAuth();
   return (
     <div>
-      <DashBoardItems />
+      <DashBoardItems user={user} />
     </div>
   );
 }
