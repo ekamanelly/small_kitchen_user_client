@@ -7,14 +7,11 @@ module.exports = {
     fontFamily: {
       mono: ["ui-monospace", "SFMono-Regular"],
     },
-    extend: {
-      colors: {
-        transparent: "transparent",
-        current: "currentColor",
-        "pmy-lime": "#318c27",
-        white: "#F8FFF7",
-        // "regal-blue": "#243c5a",
-      },
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      "pmy-lime": "#318c27",
+      white: "#F8FFF7",
     },
   },
   variants: {

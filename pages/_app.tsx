@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <RecoilRoot>
       <AuthProvider>
         <AuthStateChange>
-          <Component {...pageProps} />;
+          <Component {...pageProps} />
         </AuthStateChange>
       </AuthProvider>
     </RecoilRoot>

@@ -7,6 +7,12 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import CustomTextArea from "../forms/customTextArea";
 import { useRouter } from "next/router";
+import { BsFillTelephoneForwardFill } from "react-icons/bs";
+import { BsFillBrushFill } from "react-icons/bs";
+import { BsFillGeoAltFill } from "react-icons/bs";
+import { BsGlobe } from "react-icons/bs";
+import { BsFillBriefcaseFill } from "react-icons/bs";
+import { BsBrush } from "react-icons/bs";
 
 type LayoutProps = {
   cols: string;
@@ -20,13 +26,15 @@ function LayoutForm() {
     // setReveal(!reveal);
   };
   interface initialValues {
-    companyName: "";
-    description: "";
-    city: "";
-    country: "";
-    state: "";
+    companyName: string;
+    description: string;
+    country: string;
+    state: string;
+    phone: string;
+    city: string;
   }
-  const handleFormSubmit = async (initialValues?: initialValues) => {
+  const handleFormSubmit = async (initialValues: any) => {
+    console.log({ initialValues });
     // value.sharedPreference = getOrStoreId();
     // const user = await mutateAsync(value);
     // console.log({ user });
@@ -43,7 +51,6 @@ function LayoutForm() {
     initialValues: {
       companyName: "",
       description: "",
-      city: "",
       country: "",
       state: "",
       phone: "",
@@ -51,24 +58,20 @@ function LayoutForm() {
     validationSchema: Yup.object({
       companyName: Yup.string()
         .max(15, "Must be 15 characters or less")
-        .required("Required"),
+        .required("Please provide a name for your business"),
       description: Yup.string()
-        .max(20, "Must be 20 characters or less")
-        .required("Required"),
-      city: Yup.string()
-        .max(20, "Must be 20 characters or less")
-        .required("Required"),
-      country: Yup.string().max(15, "Must be 20 characters or less"),
-      // .required("Required"),
-      state: Yup.string()
-        .max(20, "Must be 20 characters or less")
-        .required("Required, abi you wan dash me"),
+        .min(24, "please tell more about your business")
+        .max(100, "you have said a lot, can you trim out small")
+        .required("you can't leave this field empty"),
+      country: Yup.string().required("you can't leave this field empty"),
+      state: Yup.string().required("you can't leave this field empty"),
       phone: Yup.string()
         .matches(phoneRegExp, "Phone Number is not valid")
-        .required("Required, dispatch rider needs to call you"),
+        .required("Required! i need your phone number"),
     }),
     onSubmit: (values) => {
-      handleFormSubmit();
+      alert(JSON.stringify(values));
+      // handleFormSubmit(values);
     },
   });
 
@@ -79,29 +82,44 @@ function LayoutForm() {
         className="p-4 w-full flex justify-center  h-full z-100  "
         // style={{ backgroundColor: "red" }}
       >
-        <div className=" p-4 w-2/5 center bg-lime-300 ">
+        <div className=" p-4 lg:w-2/5 md:w-4/5 center bg-lime-300 ">
           <form onSubmit={formik.handleSubmit}>
-            <CustomInput value="company's name" label="company name" />
             <CustomInput
-              value="phone"
-              label="phone number"
+              icon={<BsFillBriefcaseFill />}
+              value="Chef Blast "
+              label="Company name"
               onchange={formik.handleChange}
               onblur={formik.handleBlur}
+              name="companyName"
+              err={formik.errors["companyName"]}
+              touched={formik.touched["companyName"]}
+            />
+            <CustomInput
+              icon={<BsFillTelephoneForwardFill />}
+              value="07082571949"
+              label="Phone Number"
+              onchange={formik.handleChange}
+              onblur={formik.handleBlur}
+              name="phone"
               err={formik.errors["phone"]}
               touched={formik.touched["phone"]}
             />
             <div className=" mt-10 flex flex-row-reverse">
               <CustomInput
+                icon={<BsFillGeoAltFill />}
                 value="state"
-                label="state "
+                label="State "
+                name="state"
                 onchange={formik.handleChange}
                 onblur={formik.handleBlur}
                 err={formik.errors["state"]}
                 touched={formik.touched["state"]}
               />
               <CustomInput
+                icon={<BsGlobe />}
                 value="country"
-                label="country "
+                label="Country"
+                name="country"
                 onchange={formik.handleChange}
                 onblur={formik.handleBlur}
                 err={formik.errors["country"]}
@@ -109,16 +127,17 @@ function LayoutForm() {
               />
             </div>
             <CustomTextArea
-              value="description"
-              label="description "
+              icon={<BsBrush />}
+              value="folk are easy to tell or listen to?"
+              label="Description "
+              name="description"
               onchange={formik.handleChange}
               onblur={formik.handleBlur}
               err={formik.errors["description"]}
               touched={formik.touched["description"]}
             />
 
-            <div className=" mt-10 flex flex-row-reverse">
-              <CustomButton value="Sorry!" />
+            <div className=" mt-10 flex flex-end">
               <CustomButton value="I like this, save!" />
             </div>
           </form>
