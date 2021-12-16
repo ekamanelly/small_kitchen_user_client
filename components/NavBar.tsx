@@ -1,11 +1,20 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import LogoImgHeader from "./LogoImgHeader";
 import useAuth from "../hooks/auth.hook";
+import CustomButton from "./forms/customButton";
+import { useRouter } from "next/router";
+import { GrSettingsOption } from "react-icons/gr";
 
 function NavBar() {
   const { error, user, loginWithGoogle, logOut } = useAuth();
+  const router = useRouter();
+
+  const handleForm = () => {
+    router.replace("/dashboard/settings");
+
+    // setReveal(!reveal);
+  };
   return (
     <div>
       <div className=" d-none d-md-block">
@@ -45,9 +54,16 @@ function NavBar() {
                     Create an Account
                   </button>
                 ) : (
-                  <button onClick={logOut} className="acctBtn">
-                    log out
-                  </button>
+                  <div className="flex justify-around ">
+                    <button onClick={logOut} className="acctBtn mr-1">
+                      log out
+                    </button>
+                    <CustomButton
+                      icon={<GrSettingsOption className="text-white" />}
+                      value={"svsv"}
+                      onclick={handleForm}
+                    />
+                  </div>
                 )}
               </div>
             </div>

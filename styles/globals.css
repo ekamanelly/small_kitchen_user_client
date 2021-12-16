@@ -108,6 +108,28 @@ body {
   font-weight: 600;
 }
 
+.glass-feel {
+  background: #fff;
+  /* min-height: 80vh;
+width: 60%; */
+  background: linear-gradient(
+    to right top,
+    rgba(218, 87, 87, 0.7),
+    rgba(231, 226, 226, 0.35),
+    rgba(255, 255, 255, 0.1),
+    transparent,
+    transparent,
+    transparent
+      /* rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1) */
+  );
+  /* border-radius: 2rem; */
+  z-index: 2;
+  backdrop-filter: blur(0.5rem);
+  display: flex;
+}
+
 .welcomeAddress > span {
   color: #318c27;
   padding: 0px;

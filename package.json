@@ -27,7 +27,8 @@
     "react-rating-stars-component": "^2.2.0",
     "recoil": "^0.5.2",
     "stable": "^0.1.8",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "react-spring": "^9.2.3"
   },
   "devDependencies": {
     "@types/node": "16.11.6",

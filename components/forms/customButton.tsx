@@ -16,10 +16,11 @@ function CustomButton(props: CustomButtonProps) {
   return (
     <div className="">
       <button
-        className="bg-pmy-lime h-10 px-6  rounded text-white"
+        className="bg-pmy-lime h-10 px-6  rounded  flex justify-center items-center"
         onClick={props.onclick}
       >
-        {props.value}
+        {props.icon}
+        <div className="ml-1"> {props.value}</div>
       </button>
     </div>
   );

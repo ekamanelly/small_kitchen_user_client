@@ -21,12 +21,6 @@ function DashBoardItems(props: DashboardProps) {
   const [reveal, setReveal] = useRecoilState(RevealForm);
   const router = useRouter();
 
-  const handleForm = () => {
-    router.replace("/dashboard/settings");
-
-    // setReveal(!reveal);
-  };
-
   return (
     <div>
       {reveal && <LayoutForm />}
@@ -41,9 +35,6 @@ function DashBoardItems(props: DashboardProps) {
               <div className="ratings">
                 <div className="stars"></div>
                 <div className="stars">4.8 (20 ratings)</div>
-                <div>
-                  <CustomButton value={"svsv"} onclick={handleForm} />
-                </div>
               </div>
             </div>
             <div className="dishesFollowersWrap">

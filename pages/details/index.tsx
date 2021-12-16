@@ -71,12 +71,12 @@ function FoodDetails() {
             <span>see all</span>
           </div>
         </div>
-        <div className="flex align-items-center justify-items-center">
+        {/* <div className="flex align-items-center justify-items-center">
           <MeatSample />
           <MeatSample />
           <MeatSample />
           <MeatSample />
-        </div>
+        </div> */}
         <CommentCard />
         <CommentCard />
       </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ListOfMeal } from "../model/meal";
+import { AnimateMealTray } from "./animation/reactSpringAnimation";
 import CommentCard from "./CommentCard";
 import MeatSample from "./MeatSample";
 
@@ -13,7 +14,7 @@ function Tab() {
             {dishes ? " show Feedback" : "show Dishes"}
           </button>
         </div>
-        {dishes ? <Dishes /> : <Feedback />}
+        {dishes ? <Dishes showDish={!dishes} /> : <Feedback />}
       </div>
     </div>
   );
@@ -40,17 +41,27 @@ const Feedback = () => {
     </div>
   );
 };
-
-const Dishes = () => {
+interface dishProps {
+  showDish: boolean;
+}
+const Dishes = (props: dishProps) => {
   return (
     <div className="lg:container">
       <div
         className="grid lg:grid-cols-2  md:grid-cols-1 gap-1 sm :grid-cols-1 px-10"
         // style={{ backgroundColor: "red" }}
       >
-        {ListOfMeal.map((cur) => (
-          <MeatSample {...cur} />
-        ))}
+        <AnimateMealTray meals={ListOfMeal} controller={props.showDish}>
+          {ListOfMeal.map((cur, idx) => (
+            <div key={idx} className="flex justify-center">
+              <MeatSample
+                name={cur.name}
+                price={cur.price.toString()}
+                url={cur.url}
+              />
+            </div>
+          ))}
+        </AnimateMealTray>
       </div>
     </div>
   );
