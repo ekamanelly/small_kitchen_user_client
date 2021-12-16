@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ListOfMeal } from "../model/meal";
 import CommentCard from "./CommentCard";
 import MeatSample from "./MeatSample";
 
@@ -47,13 +48,9 @@ const Dishes = () => {
         className="grid lg:grid-cols-2  md:grid-cols-1 gap-1 sm :grid-cols-1 px-10"
         // style={{ backgroundColor: "red" }}
       >
-        <MeatSample />
-        <MeatSample />
-        <MeatSample />
-        <MeatSample />
-        <MeatSample />
-        <MeatSample />
-        <MeatSample />
+        {ListOfMeal.map((cur) => (
+          <MeatSample {...cur} />
+        ))}
       </div>
     </div>
   );

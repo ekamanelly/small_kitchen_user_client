@@ -3,11 +3,9 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 
-// import firebase from "firebase/app";         firebase v8 
-// import "firebase/auth";                      firebase v8 
-// import "firebase/firestore";                 firebase v8 
-
-
+// import firebase from "firebase/app";         firebase v8
+// import "firebase/auth";                      firebase v8
+// import "firebase/firestore";                 firebase v8
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,

@@ -2,14 +2,26 @@ import React from "react";
 import Image from "next/image";
 import Meat from "../public/media/Meat.png";
 
-function MeatSample() {
+interface mealProps {
+  name: string;
+  price: string;
+  url: string;
+}
+
+function MeatSample({ name, url, price }: mealProps) {
   return (
     <div>
       <div
         className="rounded-lg flex green justify-center p-1"
         style={{ backgroundColor: "", margin: 0 }}
       >
-        <Image src={Meat} alt="photo" className=" rounded-lg " />
+        <Image
+          width={200}
+          height={250}
+          src={url}
+          alt="photo"
+          className=" rounded-lg "
+        />
         <div className=" " style={{ backgroundColor: "white" }}>
           <ul className="list-disc ">
             <li className="flex items-start">
@@ -28,7 +40,10 @@ function MeatSample() {
               </span>
               <p className="ml-2">
                 price: N
-                <code className="text-sm font-bold text-gray-900"> 1500</code>
+                <code className="text-sm font-bold text-gray-900">
+                  {" "}
+                  {price}
+                </code>
               </p>
             </li>
             <li className="flex items-start">
@@ -66,9 +81,7 @@ function MeatSample() {
               </span>
               <p className="ml-2">
                 name:{" "}
-                <code className="text-sm font-bold text-gray-900">
-                  Mellon stew and roasted cat fish
-                </code>
+                <code className="text-sm font-bold text-gray-900">{name}</code>
               </p>
             </li>
 
