@@ -2,7 +2,7 @@ import React from "react";
 import { config, animated, useTrail } from "@react-spring/web";
 
 export const AnimateMealTray = (props: any) => {
-  const { meals, controller } = props;
+  const { meals, controller, animateClassName } = props;
   const mealTray = React.Children.toArray(props.children);
 
   const trail = useTrail(meals.length, {
@@ -13,7 +13,7 @@ export const AnimateMealTray = (props: any) => {
     from: { opacity: 0, x: 20, width: 0 },
   });
   return (
-    <div>
+    <div className={animateClassName}>
       {trail.map(({ width, ...style }, idx) => (
         <animated.div key={idx} style={style}>
           {mealTray[idx]}

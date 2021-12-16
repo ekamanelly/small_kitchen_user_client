@@ -24,7 +24,7 @@ function MeatSample({ name, url, price }: mealProps) {
           className="rounded-lg"
         />
       </div>
-      <div className="absolute transform font-bold -translate-y-24 translate-x-1 glass-feel w-4/6 p-3 rounded-tr-lg rounded-bl-lg truncate ellipsis">
+      <div className="absolute transform font-bold -translate-y-24 translate-x-1 glass-feel w-4/6 p-3 rounded-tr-lg rounded-bl-lg truncate">
         <ul>
           <li>{name}</li>
           <li>${price}</li>

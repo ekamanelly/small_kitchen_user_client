@@ -48,10 +48,14 @@ const Dishes = (props: dishProps) => {
   return (
     <div className="lg:container">
       <div
-        className="grid lg:grid-cols-2  md:grid-cols-1 gap-1 sm :grid-cols-1 px-10"
-        // style={{ backgroundColor: "red" }}
+      // className=
+      // style={{ backgroundColor: "red" }}
       >
-        <AnimateMealTray meals={ListOfMeal} controller={props.showDish}>
+        <AnimateMealTray
+          meals={ListOfMeal}
+          controller={props.showDish}
+          animateClassName="grid lg:grid-cols-2  md:grid-cols-1 gap-1 sm :grid-cols-1 px-10"
+        >
           {ListOfMeal.map((cur, idx) => (
             <div key={idx} className="flex justify-center">
               <MeatSample
