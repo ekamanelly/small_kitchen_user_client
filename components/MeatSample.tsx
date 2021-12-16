@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Meat from "../public/media/Meat.png";
 
 interface mealProps {
   name: string;
@@ -10,7 +9,7 @@ interface mealProps {
 
 function MeatSample({ name, url, price }: mealProps) {
   return (
-    <div className="shadow-md w-4/5 relative ">
+    <div className="shadow-lg w-4/5 relative">
       <div
         className="rounded-lg green p-1 w-full "
         style={{ backgroundColor: "", margin: 0 }}
