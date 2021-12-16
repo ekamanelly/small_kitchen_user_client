@@ -8,15 +8,7 @@ interface mealProps {
   url: string;
 }
 
-function MeatSample({
-  name,
-  url,
-  price,
-}: {
-  name: string;
-  price: string;
-  url: string;
-}) {
+function MeatSample({ name, url, price }: mealProps) {
   return (
     <div className="shadow-md w-4/5 relative ">
       <div
