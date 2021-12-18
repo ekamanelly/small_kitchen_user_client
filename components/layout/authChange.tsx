@@ -3,6 +3,8 @@ import firebase from "firebase/compat/app";
 // import "firebase/compat/auth ";
 import "firebase/compat/auth";
 import useAuth from "../../hooks/auth.hook";
+import LottieAnimation from "../animation/lottieAnimation";
+import loadingIcon from "../../public/animation/loading.json";
 
 const AuthStateChange = ({ children }: { children: any }) => {
   const { setUser } = useAuth();
@@ -12,7 +14,10 @@ const AuthStateChange = ({ children }: { children: any }) => {
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
       setUser(user);
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+
       // setApiCaller(user);
     });
     //eslint-disable-next-line
@@ -20,7 +25,7 @@ const AuthStateChange = ({ children }: { children: any }) => {
   // apiCall.post()
 
   if (loading) {
-    return <h1>loading....</h1>;
+    return <LottieAnimation lotti={loadingIcon} height={600} width={600} />;
   }
   return children;
 };

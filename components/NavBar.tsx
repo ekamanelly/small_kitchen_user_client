@@ -5,16 +5,25 @@ import useAuth from "../hooks/auth.hook";
 import CustomButton from "./forms/customButton";
 import { useRouter } from "next/router";
 import { GrSettingsOption } from "react-icons/gr";
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from "recoil";
+import { RevealForm } from "../atoms";
 
 function NavBar() {
   const { error, user, loginWithGoogle, logOut } = useAuth();
   const router = useRouter();
+  const [showingForm, setForm] = useRecoilState(RevealForm);
 
-  const handleForm = () => {
-    router.replace("/dashboard/settings");
+  // const handleForm = () => {
+  //   router.replace("/dashboard/settings");
 
-    // setReveal(!reveal);
-  };
+  //   // setReveal(!reveal);
+  // };
   return (
     <div>
       <div className=" d-none d-md-block">
@@ -60,8 +69,8 @@ function NavBar() {
                     </button>
                     <CustomButton
                       icon={<GrSettingsOption className="text-white" />}
-                      value={"svsv"}
-                      onclick={handleForm}
+                      value={""}
+                      onclick={() => setForm(!showingForm)}
                     />
                   </div>
                 )}

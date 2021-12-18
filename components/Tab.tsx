@@ -1,20 +1,26 @@
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { ListOfMeal } from "../model/meal";
 import { AnimateMealTray } from "./animation/reactSpringAnimation";
 import CommentCard from "./CommentCard";
 import MeatSample from "./MeatSample";
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from "recoil";
+import { RevealDishes } from "../atoms";
 
 function Tab() {
-  const [dishes, setDishes] = useState<boolean>(true);
+  const [showingDishes] = useRecoilState(RevealDishes);
+
   return (
     <div>
       <div className="container">
-        <div className="feedback">
-          <button onClick={() => setDishes(!dishes)}>
-            {dishes ? " show Feedback" : "show Dishes"}
-          </button>
-        </div>
-        {dishes ? <Dishes showDish={!dishes} /> : <Feedback />}
+        <div className="feedback"></div>
+        {showingDishes ? <Dishes showDish={!showingDishes} /> : <Feedback />}
       </div>
     </div>
   );
@@ -45,6 +51,8 @@ interface dishProps {
   showDish: boolean;
 }
 const Dishes = (props: dishProps) => {
+  const router = useRouter();
+  const seeDetail = (slug: string) => router.push(`details/${slug}`);
   return (
     <div className="lg:container">
       <div
@@ -54,15 +62,15 @@ const Dishes = (props: dishProps) => {
         <AnimateMealTray
           meals={ListOfMeal}
           controller={props.showDish}
-          animateClassName="grid lg:grid-cols-2  md:grid-cols-1 gap-1 sm :grid-cols-1 px-10"
+          animateClassName="grid lg:grid-cols-2  md:grid-cols-2 gap-1 sm :grid-cols-1 "
         >
-          {ListOfMeal.map((cur, idx) => (
-            <div key={idx} className="flex justify-center">
-              <MeatSample
-                name={cur.name}
-                price={cur.price.toString()}
-                url={cur.url}
-              />
+          {ListOfMeal.map(({ name, price, url, slug }, idx) => (
+            <div
+              onClick={() => seeDetail(slug)}
+              key={idx}
+              className="flex justify-center"
+            >
+              <MeatSample name={name} price={price.toString()} url={url} />
             </div>
           ))}
         </AnimateMealTray>

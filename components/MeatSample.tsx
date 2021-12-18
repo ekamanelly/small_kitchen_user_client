@@ -9,7 +9,7 @@ interface mealProps {
 
 function MeatSample({ name, url, price }: mealProps) {
   return (
-    <div className="shadow-lg w-4/5 relative">
+    <div className="shadow-md w-4/5 relative cursor-pointer">
       <div
         className="rounded-lg green p-1 w-full "
         style={{ backgroundColor: "", margin: 0 }}
@@ -18,7 +18,6 @@ function MeatSample({ name, url, price }: mealProps) {
           layout="responsive"
           width={400}
           height={250}
-          // src={Meat}
           src={url}
           alt="photo"
           className="rounded-lg"

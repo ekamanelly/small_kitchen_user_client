@@ -3,6 +3,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { ImTwitter } from "react-icons/im";
 import { GrLinkedin } from "react-icons/gr";
+import { FadeInAndOut } from "../animation/reactSpringAnimation";
 // import { Transform } from "stream";
 
 export type CustomInputProps = {
@@ -37,7 +38,11 @@ function CustomInput(props: CustomInputProps) {
           className="w-full h-full p-3 outline-none font-semibold text-base"
         />
       </div>
-      {props.touched && <div>{props.err}</div>}
+      <FadeInAndOut
+        controller={props.touched ? true : false}
+        component={props.err}
+        duration={3000}
+      />
     </div>
   );
 }

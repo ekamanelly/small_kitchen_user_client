@@ -1,5 +1,5 @@
 import React from "react";
-import { config, animated, useTrail } from "@react-spring/web";
+import { config, animated, useTrail, useSpring } from "@react-spring/web";
 
 export const AnimateMealTray = (props: any) => {
   const { meals, controller, animateClassName } = props;
@@ -40,3 +40,28 @@ export const AnimateFavorite = (props: any) => {
     </animated.div>
   ));
 };
+
+interface FadeInAndOutType {
+  controller: boolean;
+  component: any;
+  duration?: number;
+}
+
+export function FadeInAndOut({
+  controller,
+  component,
+  duration,
+}: FadeInAndOutType) {
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    reset: true,
+    reverse: controller,
+    delay: 200,
+    duration,
+    config: config.molasses,
+    // onRest: () => set(!flip),
+  });
+
+  return <animated.div style={props}>{component}</animated.div>;
+}

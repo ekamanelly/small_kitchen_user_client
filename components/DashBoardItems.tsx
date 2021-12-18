@@ -2,10 +2,9 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useRecoilState, RecoilState } from "recoil";
-import { RevealForm } from "../atoms";
+import { BusinessDetails, RevealDishes, RevealForm } from "../atoms";
+// import { RevealForm } from "../atoms";
 import BigBadge from "../public/media/BigBadge.svg";
-import CustomButton from "./forms/customButton";
-import LayoutForm from "./layout/layoutForm";
 import Tab from "./Tab";
 
 interface vendors {
@@ -15,23 +14,41 @@ interface vendors {
 interface DashboardProps {
   user: {
     displayName: string;
+    photoURL: string;
   };
 }
 function DashBoardItems(props: DashboardProps) {
-  const [reveal, setReveal] = useRecoilState(RevealForm);
-  const router = useRouter();
+  const [showingDishes, setDishes] = useRecoilState(RevealDishes);
+  // const [showingForm, setForm] = useRecoilState(RevealForm);
+  const [registrationDetail, setRegistrationDetails] =
+    useRecoilState(BusinessDetails);
 
+  console.log({ registrationDetail });
   return (
     <div>
-      {reveal && <LayoutForm />}
       <div className="container">
         <div className="flex space-x-2">
           <div className="sectionOne">
-            <Image src={BigBadge} alt="photo" />
+            <div
+              className="rounded-lg green p-1 w-full "
+              style={{ backgroundColor: "", margin: 0 }}
+            >
+              {/* <Image
+                layout="responsive"
+                width={400}
+                height={250}
+                src={BigBadge}
+                alt="photo"
+                className="rounded-lg"
+              /> */}
+              <Image src={BigBadge} alt="photo" />
+            </div>
           </div>
           <div className="sectionTwo">
             <div className="serviceNameWrap">
-              <span className="serviceName">Burnout Grills</span>
+              <span className="serviceName">
+                {registrationDetail.companyName}
+              </span>
               <div className="ratings">
                 <div className="stars"></div>
                 <div className="stars">4.8 (20 ratings)</div>
@@ -59,16 +76,23 @@ function DashBoardItems(props: DashboardProps) {
               <div className="aboutServiceWrap">
                 <ul>
                   <li>Owner {props.user.displayName}</li>
-                  <li>Yaba, Lagos</li>
-                  <li>Sumptuous meals</li>
-                  <li>Continental and African Dishes</li>
+                  <li>
+                    {registrationDetail.state} {registrationDetail.country}
+                  </li>
+                  <li>{registrationDetail.phone}</li>
+                  <li>{registrationDetail.description}</li>
                 </ul>
               </div>
             </div>
 
             <div className="buttons">
               <div>
-                <button className="followbtn">Follow</button>
+                <button
+                  onClick={() => setDishes(!showingDishes)}
+                  className="followbtn"
+                >
+                  {showingDishes ? "Customer" : "Dishes"}
+                </button>
               </div>
               <div>
                 <button className="sendMsg">Send a Message</button>

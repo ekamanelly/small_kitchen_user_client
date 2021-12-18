@@ -1,6 +1,6 @@
 import { type } from "os";
 import { useRecoilState } from "recoil";
-import { RevealForm } from "../../atoms";
+// import { RevealForm } from "../../atoms";
 import CustomButton from "../forms/customButton";
 import CustomInput from "../forms/customInput";
 import { useFormik } from "formik";
@@ -8,18 +8,16 @@ import * as Yup from "yup";
 import CustomTextArea from "../forms/customTextArea";
 import { useRouter } from "next/router";
 import { BsFillTelephoneForwardFill } from "react-icons/bs";
-import { BsFillBrushFill } from "react-icons/bs";
 import { BsFillGeoAltFill } from "react-icons/bs";
 import { BsGlobe } from "react-icons/bs";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import { BsBrush } from "react-icons/bs";
-
-type LayoutProps = {
-  cols: string;
-};
+import { BusinessDetails, RevealForm } from "../../atoms";
 
 function LayoutForm() {
-  const [reveal, setReveal] = useRecoilState(RevealForm);
+  const [, setRegistrationDetails] = useRecoilState(BusinessDetails);
+  const [revealForm, setRevealForm] = useRecoilState(RevealForm);
+
   const router = useRouter();
   const handleForm = () => {
     router.replace("/dashboard");
@@ -33,16 +31,7 @@ function LayoutForm() {
     phone: string;
     city: string;
   }
-  const handleFormSubmit = async (initialValues: any) => {
-    console.log({ initialValues });
-    // value.sharedPreference = getOrStoreId();
-    // const user = await mutateAsync(value);
-    // console.log({ user });
-    // if (user.status) {
-    //   getOrStoreId(user.body.sharedPreference);
-    //   window.location.href = user.body.pay;
-    // }
-  };
+  const handleFormSubmit = async (initialValues: any) => {};
 
   //form validation
   const phoneRegExp =
@@ -70,8 +59,8 @@ function LayoutForm() {
         .required("Required! i need your phone number"),
     }),
     onSubmit: (values) => {
-      alert(JSON.stringify(values));
-      // handleFormSubmit(values);
+      setRegistrationDetails(values);
+      setRevealForm(!revealForm);
     },
   });
 
@@ -80,7 +69,6 @@ function LayoutForm() {
       <div
         onDoubleClick={handleForm}
         className="p-4 w-full flex justify-center  h-full z-100  "
-        // style={{ backgroundColor: "red" }}
       >
         <div className=" p-4 lg:w-2/5 md:w-4/5 center bg-lime-300 ">
           <form onSubmit={formik.handleSubmit}>
