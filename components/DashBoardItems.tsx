@@ -19,7 +19,6 @@ interface DashboardProps {
 }
 function DashBoardItems(props: DashboardProps) {
   const [showingDishes, setDishes] = useRecoilState(RevealDishes);
-  // const [showingForm, setForm] = useRecoilState(RevealForm);
   const [registrationDetail, setRegistrationDetails] =
     useRecoilState(BusinessDetails);
 

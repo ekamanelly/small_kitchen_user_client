@@ -13,15 +13,20 @@ function GettingStarted() {
                 Get started in <span>3 easy steps</span>
               </div>
               <div className="steps">
-                <div>1</div>Prepare month watering, finger linking continental
-                meal!
+                <p className="text-xl ">
+                  Prepare mouthwatering finger continental dish!
+                </p>{" "}
               </div>
               <div className="steps">
-                <div>2</div>Make post it, share a little about the meal but not
-                your mum's secret recipe...
+                <div>
+                  <p className="text-xl ">
+                    Post it, share a little about the meal but not your mum's
+                    secret recipe!!
+                  </p>{" "}
+                </div>
               </div>
               <div className="steps">
-                <div>3</div> We deliver when you sell.
+                <p className="text-xl ">We deliver what you sell!!!</p>{" "}
               </div>
             </div>
             <div className="col-md-6">

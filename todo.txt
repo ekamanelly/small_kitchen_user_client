@@ -1,0 +1,3 @@
+use a better font 
+complete app navigation 
+complete animation

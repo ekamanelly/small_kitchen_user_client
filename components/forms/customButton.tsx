@@ -5,7 +5,7 @@ export type CustomButtonProps = {
   icon?: any;
   value?: string;
   grids?: string;
-  label?: string;
+  label: string;
   err?: string | boolean;
   touched?: string | boolean;
   // onchange: (e: any) => void | null;

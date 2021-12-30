@@ -12,7 +12,9 @@ function Settings() {
   return (
     <div>
       <NavBar />
-      <LayoutForm />
+
+      {/* <LayoutForm /> */}
+
       <Footer />
     </div>
   );

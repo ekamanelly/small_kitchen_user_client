@@ -11,6 +11,11 @@ export const RevealDishes = atom({
   default: true, // default value (aka initial value)
 });
 
+export const isLoading = atom({
+  key: "isLoading", // unique ID (with respect to other atoms/selectors)
+  default: true, // default value (aka initial value)
+});
+
 export const RevealForm = atom({
   key: "RevealForm", // unique ID (with respect to other atoms/selectors)
   default: false, // default value (aka initial value)

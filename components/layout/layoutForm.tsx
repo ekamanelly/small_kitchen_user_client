@@ -116,7 +116,7 @@ function LayoutForm() {
             </div>
             <CustomTextArea
               icon={<BsBrush />}
-              value="folk are easy to tell or listen to?"
+              value="Banga is quite an important food for the Urhobo speaking people which is why it is on our list of the top 10 most popular local dishes and traditional foods in Lagos"
               label="Description "
               name="description"
               onchange={formik.handleChange}
@@ -126,7 +126,7 @@ function LayoutForm() {
             />
 
             <div className=" mt-10 flex flex-end">
-              <CustomButton value="I like this, save!" />
+              <CustomButton label="yes" value="Save!" />
             </div>
           </form>
         </div>
